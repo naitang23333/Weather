@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>白天黑夜切换按钮</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      transition: all 0.5s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap: 30px;
+      color: white;
+    }
+    .demo-text {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo-text">这是一个白天/黑夜模式切换按钮UI演示的示例页面</div>
+  
+  <theme-button id="btn" size="10"></theme-button>
+
+  <script>
+    document.body.style.backgroundColor = "aliceblue";
+    document.body.style.color = "black";
+    btn.addEventListener("change", e => {
+      if (e.detail === 'dark') {
+        // 夜间模式
+        document.body.style.backgroundColor = "#424242";
+        document.body.style.color = "white";
+      } else {
+        // 白天模式
+        document.body.style.backgroundColor = "aliceblue";
+        document.body.style.color = "black";
+      }
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
