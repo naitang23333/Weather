@@ -1,4 +1,3 @@
-
 (() => {
   const func = (root, initTheme, changeTheme) => {
     const $ = (s) => {
